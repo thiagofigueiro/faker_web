@@ -11,3 +11,6 @@ script:
   - python setup.py test
 after_success:
   - coverage report -m
+  - pip install coveralls
+  - coveralls
+
