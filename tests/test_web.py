@@ -4,3 +4,4 @@ import re
 
 def test_mime_type(fake):
     assert re.match(r'\w+/\w([.+-]\w+)*', fake.mime_type())
+    assert re.match(r'\w+/\w([.+-]\w+)*', fake.mime_type_popular())

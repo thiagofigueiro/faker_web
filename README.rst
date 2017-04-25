@@ -36,6 +36,8 @@ Add the `WebProvider` to your Faker instance:
 
     fake.mime_type()
     # 'application/mxf'
+    fake.mime_type_popular()
+    # text/html
 
 
 .. |pypi| image:: https://img.shields.io/pypi/v/faker_web.svg?style=flat-square&label=version
