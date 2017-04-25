@@ -5,7 +5,10 @@ faker_web
 
 faker_web is a provider for the `Faker`_ Python package.
 
-It provides web-related fake data for testing purposes.
+It provides web-related fake data for testing purposes:
+
+   * Content-type http header (mime-type).
+   * Popular web server version tokens/signatures.
 
 
 Usage
@@ -24,7 +27,7 @@ Or install with setup.py
     git clone https://github.com/thiagofigueiro/faker_web.git
     cd faker_web && python setup.py install
 
-Add the `WebProvider` to your Faker instance:
+Add the ``WebProvider`` to your ``Faker`` instance:
 
 .. code:: python
 
