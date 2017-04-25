@@ -77,24 +77,24 @@ class WebProvider(BaseProvider):
         '8.0',
     )
 
-    def mime_type(self):
+    def content_type(self):
         """
         Returns a mime-type from the list of types understood by the Apache
         http server.
 
-        >>> fake.mime_type()
+        >>> fake.content_type()
         application/mxf
 
-        :return: content-type/mime-type
+        :return: content-type
         :rtype: str
         """
         return self.random_element(self.all_mime_types.keys())
 
-    def mime_type_popular(self):
+    def content_type_popular(self):
         """
         Returns a popular mime-type.
 
-        >>> fake.mime_type_popular()
+        >>> fake.content_type_popular()
         text/html
 
         :return: content-type/mime-type

@@ -4,9 +4,9 @@ import re
 from src.web import WebProvider  # noqa
 
 
-def test_mime_type(fake):
-    assert re.match(r'\w+/\w([.+-]\w+)*', fake.mime_type())
-    assert re.match(r'\w+/\w([.+-]\w+)*', fake.mime_type_popular())
+def test_content_type(fake):
+    assert re.match(r'\w+/\w([.+-]\w+)*', fake.content_type())
+    assert re.match(r'\w+/\w([.+-]\w+)*', fake.content_type_popular())
 
 
 def test_server_token(fake):
