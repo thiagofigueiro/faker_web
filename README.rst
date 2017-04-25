@@ -3,7 +3,7 @@ faker_web
 
  |pypi| |unix_build| |coverage| |license|
 
-faker_web is a provider for [joke2k's faker](https://github.com/joke2k/faker) Python package.
+faker_web is a provider for the `Faker`_ Python package.
 
 It provides web-related fake data for testing purposes.
 
@@ -23,3 +23,5 @@ It provides web-related fake data for testing purposes.
 .. |license| image:: https://img.shields.io/badge/license-apache-blue.svg?style=flat-square
     :target: https://github.com/thiagofigueiro/faker_web/blob/master/LICENSE
     :alt: Apache license version 2.0
+
+.. _Faker: https://github.com/joke2k/faker
