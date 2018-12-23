@@ -8,7 +8,14 @@ from setuptools import setup
 here = os.path.abspath(os.path.dirname(__file__))
 README = io.open(os.path.join(here, 'README.rst'), encoding="utf8").read()
 
-version = '0.3.1-dev'
+version = '0.3.1'
+
+tests_require = [
+    'pytest',
+    'pytest-cov',
+    'pytest-flakes',
+    'pytest-pep8',
+]
 
 # this module can be zip-safe if the zipimporter implements iter_modules or if
 # pkgutil.iter_importer_modules has registered a dispatch for the zipimporter.
@@ -27,7 +34,7 @@ setup(
     long_description=README,
     classifiers=[
         # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Programming Language :: Python',
@@ -38,6 +45,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Software Development :: Testing',
@@ -54,16 +62,8 @@ setup(
     platforms=['any'],
     test_suite='pytest',
     zip_safe=zip_safe,
-    setup_requires=[
-        'pytest-runner'
-    ],
-    tests_require=[
-        'pytest',
-        'pytest-cov',
-        'pytest-flakes',
-        'pytest-pep8',
-    ],
-    install_requires=[
-        'faker',
-    ],
+    setup_requires=['pytest-runner'],
+    tests_require=tests_require,
+    install_requires=['faker'],
+    extras_require={'test': tests_require},
 )

@@ -8,6 +8,8 @@ python:
   - 3.6
   - '3.7-dev'
   - "pypy"
+install:
+- pip install .[test]
 script:
   - python setup.py test
 after_success:
