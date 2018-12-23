@@ -1,26 +1,26 @@
 language: python
 sudo: false
 python:
-  - 3.4
-  - 3.5
-  - 3.6
-  - '3.7-dev'
-  - "pypy"
+- 3.4
+- 3.5
+- 3.6
+- 3.7-dev
+- pypy
 install:
 - pip install .[test]
 script:
-  - python setup.py test
+- python setup.py test
 after_success:
-  - coverage report -m
-  - pip install coveralls
-  - coveralls
+- coverage report -m
+- pip install coveralls
+- coveralls
 deploy:
   provider: pypi
   user: thiagofigueiro
   password:
-    secure: Stv4knSaSR6q/81MACxW89F2sKtbJdFJ5CgloYG6y2uFkeDF3xkNTWk61FAdRwRrRcCSsTmd23wVSN1szZ0JxPRLcL3uxg0ItWBWOcKrAKuVi7zG1y96K+4R9fuaaebyW2hBXBNm7fzdFXq5reTCTdb8XVvMbn+IURBsb0GqQeOyGwUEhfdswY+oXccVBJ69i6oOqvJxXAqDzENkv15fmpUEzAkmFSxt7MnLwdjeG4eJk1d5JeCwji9f92CkAJZQmOHUUXjOaHEvI80SE/5ux+pzVm3Dd9A/jHpbEIyNricCiNaUiqbphQNHRW5HrrLrQPtLI5sF9+WXZhLthh8vmW5C1hEbZjG6g5D9W70TG79DIBosbeoQNlLNrP+QiLMAdbjsvQ8zvRnWJ6nLRv3AGkrUvZiFfX2bvUgf82N/mwBEBmhE0nwMXw7RVIhJxZptKaphAv+XZCwgT8nhKvUHDgxZQp0RM3Den+y3bjHAiP9YChVSk/c9ezhavAgyGK+o75+Ndmj6GeCXY7V/SqgfcXBlpd5iuiKuTfYYEk/ARK0L0SWQB4uPeWU6nE3OhU3OHPYk2HNnwTOvETZuq8KgSKgdtXkGiDs+7Ja+HIXWu1YIQyHkor07O+8SoeR7/7dCs7IFGhGCoTXkSUnSoMikppmvBnnRWR40cFfCI0336t8=
+    secure: eTHCGo6yll/3MNlBDKpRX+aZx6zVE+/WC55xQcaOhUYEGn3hZbl41hEnr4fxLEalyA3GVWhu5QH7anLDLUDy1UFpFJ8G9DPqjF0Ac2GssQ0y0cH0tZ6vVH5zFMQpODbRoVCQu2gS6fSBTGFX3HfEC5Z1x3Pf5vLfkjOwIfS/dQNQljbPbdA96NG/c9kezAsqq4vQ/jzCAIO0CafRBcHralO8ko4ekWW4erma9wNeDIyeWWSKD0m/0LiVlm9s3TrpANs2Iz/o/VcvoCk4wAJ3KyWOJlcbT7BSg4jBtgQ8W71HSE28mGa69WusBgEkMnl8dE4PuKf6E1Sl66efT9l8vns+4pMij5+vpXbSQp9BlR9Dyg4NGZQzQ67DydTgUmySh+E00/WHoUSrAJIFZ1UgjOXRczw9qI1rNk7EnqbImLbZbFzM3j+wxQbSRDeuT38yBFQ7qL/ZT216vVAZqCRXmRK7Mn0F+NdJb0O/YQwXVfgf8TbQoiZaN52Ni3TmFz6QKtID51P81YBh3q+wnukxx/mrSdvza/l2A8Yd/0p2QDp9sOTvw9GSTcDCJAF2jxBm7e8EwTzGltYwKVepZUdNg+NnqaUrIteCxg0PYz4XaqCBWc0Jb8lIPZsXPV1M+aTE7i85c1NOLZKkh2BIX5RkvFRqAyj2+ATS2fxRf+jFRxg=
   on:
-    condition: $TRAVIS_PYTHON_VERSION == '3.6'
+    condition: "$TRAVIS_PYTHON_VERSION == '3.6'"
     repo: thiagofigueiro/faker_web
     tags: true
-  distributions: "sdist bdist_wheel"
+  distributions: sdist bdist_wheel
